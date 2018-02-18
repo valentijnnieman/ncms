@@ -1,6 +1,6 @@
 # NextCMS
 
-![alt text](https://raw.githubusercontent.com/valentijnnieman/ncms/master/static/img/ncms-logo.svg "NCMS LOGO")
+![alt text](https://raw.githubusercontent.com/valentijnnieman/ncms/master/static/img/ncms-logo.svg?sanitize=true "NCMS LOGO")
 
 A CMS built upon Next.js - this is a proof of concept, using Next, Koa, and Mongodb to set up a simple CMS system for blogs and the like.
 
