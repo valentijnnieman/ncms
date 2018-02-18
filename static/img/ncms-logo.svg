@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="286px" height="229px" viewBox="0 0 286 229" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2">
+            <g id="next-black" fill="#000000" fill-rule="nonzero">
+                <g id="EXT-+-Type-something">
+                    <path d="M69.7485407,46.7290323 L125.269767,46.7290323 L125.269767,51.1419355 L74.8379864,51.1419355 L74.8379864,84.3548387 L122.262367,84.3548387 L122.262367,88.7677419 L74.8379864,88.7677419 L74.8379864,125.232258 L125.848113,125.232258 L125.848113,129.645161 L69.7485407,129.645161 L69.7485407,46.7290323 Z M130.243544,46.7290323 L136.142674,46.7290323 L162.283918,83.1935484 L189.003508,46.7290323 L225.346507,0.41071165 L165.638325,87.0258065 L196.406338,129.645161 L190.27587,129.645161 L162.283918,90.8580645 L134.176297,129.645161 L128.161498,129.645161 L159.160849,87.0258065 L130.243544,46.7290323 Z M198.604054,51.1419354 L198.604054,46.7290323 L261.875118,46.7290323 L261.875118,51.1419355 L232.726474,51.1419355 L232.726474,129.645161 L227.637028,129.645161 L227.637028,51.1419355 L198.604054,51.1419354 Z" id="EXT"></path>
+                    <polygon id="Type-something" points="0.289190704 46.7290323 6.6509979 46.7290323 94.3765964 178.00202 58.1238016 129.645161 5.6099749 53 5.37863646 129.645161 0.289190704 129.645161"></polygon>
+                </g>
+            </g>
+            <text id="CMS" font-family="BrushScriptMT, Brush Script MT" font-size="100" font-style="italic" font-weight="normal" fill="#FF0093">
+                <tspan x="74" y="214">CMS</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

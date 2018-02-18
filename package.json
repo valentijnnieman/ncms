@@ -1,0 +1,30 @@
+{
+  "name": "ncms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "prestart": "mongod --dbpath data --fork --logpath /dev/null",
+    "dev": "npm run prestart && node server.js && npm run poststop",
+    "poststop": "mongo admin --eval 'db.shutdownServer()' > /dev/null",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "author": "valentijn nieman",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.4.1",
+    "koa-bodyparser": "^4.2.0",
+    "koa-passport": "^4.0.1",
+    "koa-router": "^7.3.0",
+    "koa-session": "^5.5.1",
+    "mongodb": "^3.0.1",
+    "next": "latest",
+    "passport-local": "^1.0.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^3.4.0"
+  }
+}
