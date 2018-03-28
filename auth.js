@@ -1,39 +1,53 @@
-const passport = require('koa-passport');
+const passport = require("koa-passport");
 const passportLocal = require("passport-local");
+const MongoClient = require("mongodb").MongoClient;
+const assert = require("assert");
+
+const dbUrl = "mongodb://localhost:27017";
+const dbName = "ncms";
 
 const LocalStrategy = passportLocal.Strategy;
 
-console.log('Auth is working')
-const fetchUser = (() => {
-    // This is an example! Use password hashing in your
-    const user = { id: 1, username: 'test', password: 'test' }
-    return async function () {
-        return user
-    }
-})()
+let db;
 
-passport.serializeUser(function (user, done) {
-    done(null, user.id)
-})
+MongoClient.connect(dbUrl, function(err, client) {
+  assert.equal(null, err);
+  console.log("DB server running");
 
-passport.deserializeUser(async function (id, done) {
-    try {
-        const user = await fetchUser()
-        done(null, user)
-    } catch (err) {
-        done(err)
-    }
-})
+  db = client.db(dbName);
+});
 
+console.log("Auth is working");
+const fetchUser = async (username, password) => {
+  const user = await db.collection("users").findOne({ username, password });
+  return user;
+};
 
-passport.use(new LocalStrategy((username, password, done) => {
-    fetchUser()
-        .then(user => {
-            if (username === user.username && password === user.password) {
-                done(null, user)
-            } else {
-                done(null, false)
-            }
-        })
-        .catch(err => done(err))
-}))
+passport.serializeUser(function(user, done) {
+  done(null, user._id);
+});
+
+passport.deserializeUser(async function(id, done) {
+  try {
+    const user = fetchUser();
+    done(null, user);
+  } catch (err) {
+    done(err);
+  }
+});
+
+passport.use(
+  new LocalStrategy((username, password, done) => {
+    fetchUser(username, password)
+      .then(user => {
+        if (user) {
+          if (username === user.username && password === user.password) {
+            done(null, user);
+          }
+        } else {
+          done(null, false);
+        }
+      })
+      .catch(err => done(err));
+  })
+);
