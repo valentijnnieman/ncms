@@ -4,7 +4,7 @@ A CMS built upon Next.js - this is a proof of concept, using Next, Koa, and Mong
 
 ### What's there
 
-In this example there are posts, an /admin part of the site, and some Materialize css. Support for users will follow soon!
+In this example there are posts, an /admin part of the site where you can log in with standard user `admin` with password `root`, and Materialize as a CSS framework.
 
 ### How do I use this?
 
